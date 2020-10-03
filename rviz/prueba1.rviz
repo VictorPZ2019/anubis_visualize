@@ -6,7 +6,10 @@ Panels:
       Expanded:
         - /Global Options1
         - /Status1
-        - /TF1
+        - /Odometry1
+        - /Odometry1/Shape1
+        - /Odometry2
+        - /Odometry2/Shape1
       Splitter Ratio: 0.5
     Tree Height: 755
   - Class: rviz/Selection
@@ -53,138 +56,79 @@ Visualization Manager:
       Plane Cell Count: 10
       Reference Frame: <Fixed Frame>
       Value: true
-    - Alpha: 1
-      Class: rviz/RobotModel
-      Collision Enabled: false
+    - Angle Tolerance: 0.10000000149011612
+      Class: rviz/Odometry
+      Covariance:
+        Orientation:
+          Alpha: 0.5
+          Color: 255; 255; 127
+          Color Style: Unique
+          Frame: Local
+          Offset: 1
+          Scale: 1
+          Value: true
+        Position:
+          Alpha: 0.30000001192092896
+          Color: 204; 51; 204
+          Scale: 1
+          Value: true
+        Value: true
       Enabled: true
-      Links:
-        All Links Enabled: true
-        Camera_telepre_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        Expand Joint Details: false
-        Expand Link Details: false
-        Expand Tree: false
-        Link Tree Style: Links in Alphabetic Order
-        Realsense_SLAM_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        base_footprint:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        base_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        chassis_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        left_front_wheel_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        left_rear_castor_housing_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        left_rear_castor_wheel_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        right_front_wheel_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        right_rear_castor_housing_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        right_rear_castor_wheel_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        rplidar_SLAM_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-      Name: RobotModel
-      Robot Description: robot_description
-      TF Prefix: ""
-      Update Interval: 0
+      Keep: 100
+      Name: Odometry
+      Position Tolerance: 0.10000000149011612
+      Shape:
+        Alpha: 1
+        Axes Length: 1
+        Axes Radius: 0.10000000149011612
+        Color: 255; 225; 0
+        Head Length: 0.30000001192092896
+        Head Radius: 0.10000000149011612
+        Shaft Length: 1
+        Shaft Radius: 0.05000000074505806
+        Value: Arrow
+      Topic: /rr_openrover_driver/odom_encoder
+      Unreliable: false
       Value: true
-      Visual Enabled: true
-    - Class: rviz/TF
+    - Angle Tolerance: 0.10000000149011612
+      Class: rviz/Odometry
+      Covariance:
+        Orientation:
+          Alpha: 0.5
+          Color: 255; 255; 127
+          Color Style: Unique
+          Frame: Local
+          Offset: 1
+          Scale: 1
+          Value: true
+        Position:
+          Alpha: 0.30000001192092896
+          Color: 204; 51; 204
+          Scale: 1
+          Value: true
+        Value: true
       Enabled: true
-      Frame Timeout: 15
-      Frames:
-        All Enabled: true
-        Camera_telepre_link:
-          Value: true
-        Realsense_SLAM_link:
-          Value: true
-        base_footprint:
-          Value: true
-        base_link:
-          Value: true
-        chassis_link:
-          Value: true
-        left_front_wheel_link:
-          Value: true
-        left_rear_castor_housing_link:
-          Value: true
-        left_rear_castor_wheel_link:
-          Value: true
-        right_front_wheel_link:
-          Value: true
-        right_rear_castor_housing_link:
-          Value: true
-        right_rear_castor_wheel_link:
-          Value: true
-        rplidar_SLAM_link:
-          Value: true
-      Marker Scale: 1
-      Name: TF
-      Show Arrows: true
-      Show Axes: true
-      Show Names: true
-      Tree:
-        base_footprint:
-          base_link:
-            chassis_link:
-              Camera_telepre_link:
-                {}
-              Realsense_SLAM_link:
-                {}
-              left_front_wheel_link:
-                {}
-              left_rear_castor_housing_link:
-                left_rear_castor_wheel_link:
-                  {}
-              right_front_wheel_link:
-                {}
-              right_rear_castor_housing_link:
-                right_rear_castor_wheel_link:
-                  {}
-              rplidar_SLAM_link:
-                {}
-      Update Interval: 0
+      Keep: 100
+      Name: Odometry
+      Position Tolerance: 0.10000000149011612
+      Shape:
+        Alpha: 1
+        Axes Length: 1
+        Axes Radius: 0.10000000149011612
+        Color: 255; 25; 0
+        Head Length: 0.30000001192092896
+        Head Radius: 0.10000000149011612
+        Shaft Length: 1
+        Shaft Radius: 0.05000000074505806
+        Value: Arrow
+      Topic: /camera/odom/sample
+      Unreliable: false
       Value: true
   Enabled: true
   Global Options:
     Background Color: 48; 48; 48
     Default Light: true
-    Fixed Frame: base_footprint
+    Fixed Frame: odom
     Frame Rate: 30
   Name: root
   Tools:
@@ -208,11 +152,7 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-<<<<<<< HEAD
-      Distance: 2.0933966636657715
-=======
-      Distance: 2.147120714187622
->>>>>>> f9667cb0e4e7892328cf6d17388f4e12ac00a598
+      Distance: 17.27579116821289
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
@@ -227,17 +167,10 @@ Visualization Manager:
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-<<<<<<< HEAD
-      Pitch: 0.5903972387313843
+      Pitch: 1.095398187637329
       Target Frame: <Fixed Frame>
       Value: Orbit (rviz)
-      Yaw: 2.5772221088409424
-=======
-      Pitch: 0.5053973197937012
-      Target Frame: <Fixed Frame>
-      Value: Orbit (rviz)
-      Yaw: 3.1754071712493896
->>>>>>> f9667cb0e4e7892328cf6d17388f4e12ac00a598
+      Yaw: 1.5503976345062256
     Saved: ~
 Window Geometry:
   Displays:

@@ -1,0 +1,3 @@
+<launch>
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find anubis_visualize)/rviz/start_bringup.rviz" required="true" />
+</launch>
